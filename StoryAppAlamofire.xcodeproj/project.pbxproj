@@ -12,6 +12,8 @@
 		B8B41B2D29788BAC00D341B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8B41B2C29788BAC00D341B2 /* Assets.xcassets */; };
 		B8B41B3029788BAC00D341B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8B41B2F29788BAC00D341B2 /* Preview Assets.xcassets */; };
 		B8B41B3729788BC300D341B2 /* StoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B41B3629788BC300D341B2 /* StoryData.swift */; };
+		B8B41B392978925A00D341B2 /* StoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B41B382978925A00D341B2 /* StoryViewModel.swift */; };
+		B8B41B3C297892F700D341B2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B8B41B3B297892F700D341B2 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		B8B41B2C29788BAC00D341B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8B41B2F29788BAC00D341B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B8B41B3629788BC300D341B2 /* StoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryData.swift; sourceTree = "<group>"; };
+		B8B41B382978925A00D341B2 /* StoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewModel.swift; sourceTree = "<group>"; };
+		B8B41B3D2978955200D341B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8B41B3C297892F700D341B2 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,11 +58,13 @@
 		B8B41B2729788BAA00D341B2 /* StoryAppAlamofire */ = {
 			isa = PBXGroup;
 			children = (
+				B8B41B3D2978955200D341B2 /* Info.plist */,
 				B8B41B2829788BAA00D341B2 /* StoryAppAlamofireApp.swift */,
 				B8B41B2A29788BAA00D341B2 /* ContentView.swift */,
+				B8B41B3629788BC300D341B2 /* StoryData.swift */,
+				B8B41B382978925A00D341B2 /* StoryViewModel.swift */,
 				B8B41B2C29788BAC00D341B2 /* Assets.xcassets */,
 				B8B41B2E29788BAC00D341B2 /* Preview Content */,
-				B8B41B3629788BC300D341B2 /* StoryData.swift */,
 			);
 			path = StoryAppAlamofire;
 			sourceTree = "<group>";
@@ -86,6 +93,9 @@
 			dependencies = (
 			);
 			name = StoryAppAlamofire;
+			packageProductDependencies = (
+				B8B41B3B297892F700D341B2 /* Alamofire */,
+			);
 			productName = StoryAppAlamofire;
 			productReference = B8B41B2529788BAA00D341B2 /* StoryAppAlamofire.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +124,9 @@
 				Base,
 			);
 			mainGroup = B8B41B1C29788BAA00D341B2;
+			packageReferences = (
+				B8B41B3A297892F700D341B2 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = B8B41B2629788BAA00D341B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8B41B392978925A00D341B2 /* StoryViewModel.swift in Sources */,
 				B8B41B2B29788BAA00D341B2 /* ContentView.swift in Sources */,
 				B8B41B2929788BAA00D341B2 /* StoryAppAlamofireApp.swift in Sources */,
 				B8B41B3729788BC300D341B2 /* StoryData.swift in Sources */,
@@ -274,6 +288,7 @@
 				DEVELOPMENT_TEAM = 45M762G46Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StoryAppAlamofire/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -303,6 +318,7 @@
 				DEVELOPMENT_TEAM = 45M762G46Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StoryAppAlamofire/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -343,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B8B41B3A297892F700D341B2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B8B41B3B297892F700D341B2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8B41B3A297892F700D341B2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B8B41B1D29788BAA00D341B2 /* Project object */;
 }

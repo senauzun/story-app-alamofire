@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var storyVM = StoryViewModel()
+    
     var body: some View {
-        VStack {
+        
+        NavigationView {
+            List(storyVM.story) { element in
+                
+                Text(element.story)
+                
+            }.navigationTitle(Text("Story App"))
             
+                .toolbar {
+                    Button(action: addStory) {
+                        Text("Get New Story!")
+                    }
+                }
         }
-        .padding()
+    }
+    
+    func addStory(){
+        storyVM.getStories(count: 1)
+        
     }
 }
 
