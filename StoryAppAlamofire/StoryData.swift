@@ -12,9 +12,3 @@ struct Welcome: Codable {
     let value: [Value]
 }
 
-// MARK: - Value
-struct Value: Codable {
-    let id: Int
-    let story: String
-    let categories: [String]
-}
